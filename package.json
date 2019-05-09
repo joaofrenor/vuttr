@@ -1,0 +1,17 @@
+{
+  "name": "vuttr",
+  "version": "1.0.0",
+  "description": "Backend for BossaBox Challenge",
+  "main": "index.js",
+  "author": "João Felipe",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.5.6",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.9.1"
+  }
+}
