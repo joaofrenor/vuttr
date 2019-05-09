@@ -23,7 +23,9 @@ class ToolController {
     const { link } = req.body;
 
     if (await Tool.findOne({ link })) {
-      return res.status(400).json({ error: "You already remamberd this tool" });
+      return res
+        .status(400)
+        .json({ error: "You already remembered this tool" });
     }
 
     const tool = await Tool.create(req.body);
