@@ -9,7 +9,8 @@ class ToolController {
     }
 
     const tool = await Tool.paginate(filters, {
-      page: req.query.page || 1
+      page: req.query.page || 1,
+      limit: 20
     });
 
     return res.json(tool);
