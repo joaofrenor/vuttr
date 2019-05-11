@@ -1,5 +1,7 @@
 # VUTTR - Backend Challenge
 
+- I recommend use Yarn as package manager, but feel free to use npm aswell
+
 ## Database setup using Docker
 
 ---
@@ -15,6 +17,12 @@
 1. `yarn` or `npm i`
 2. `yarn start` or `npm run start`
 
-- I recommend use Yarn as package manager, but feel free to use npm aswell
-
 - Project will run on port 3000
+
+## Init Tests
+
+---
+
+### To use test you should do
+
+1. `yarn test` or `npm run test`
