@@ -2,18 +2,13 @@ const Tool = require("../models/Tool");
 
 class ToolController {
   async index(req, res) {
-    const filters = {};
-
-    if (req.body.tag) {
-      filters.tags = req.body.tag;
+    if (req.query.tag) {
+      const tool = await Tool.find({ tags: req.query.tag });
+      return res.json(tool);
+    } else {
+      const tool = await Tool.find();
+      return res.json(tool);
     }
-
-    const tool = await Tool.paginate(filters, {
-      page: req.query.page || 1,
-      limit: 20
-    });
-
-    return res.json(tool);
   }
   async show(req, res) {
     const tool = await Tool.find(req.params.id);
@@ -25,7 +20,7 @@ class ToolController {
 
     if (await Tool.findOne({ link })) {
       return res
-        .status(400)
+        .status(401)
         .json({ error: "You already remembered this tool" });
     }
 

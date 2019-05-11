@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env"
+});
+
 module.exports = {
-  uri: "mongodb://localhost:27017/vuttr"
+  uri: process.env.URI
 };

@@ -7,14 +7,22 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js --ignore __tests__"
+    "dev": "nodemon src/index.js --ignore __tests__",
+    "test": "NODE_ENV=test jest"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb-memory-server": "^5.1.1",
     "mongoose": "^5.5.6",
-    "mongoose-paginate": "^5.0.3",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
